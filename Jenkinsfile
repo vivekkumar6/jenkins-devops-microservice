@@ -15,4 +15,5 @@ pipeline {
 		always {
 			echo 'I run always'
 		}
+	}
 }
