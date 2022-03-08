@@ -1,24 +1,24 @@
-pipeline{
+pipeline {
 	agent any
-	stages{
-		stage('Build'){
-			steps{
+	stages {
+		stage('Build') {
+			steps {
 				echo 'Build'
 			}
 		}
-		stage('Test'){
+		stage('Test') {
 			steps{
 				echo 'Test'
 			}
 		}		
-	} post{
-		always{
+	} post {
+		always {
 			echo 'I run always'
 		}
-		success{
+		success {
 			echo 'I run if its succesful'
 		}
-		failure{
+		failure {
 			echo 'I run if its a failure'
 		}
 	}
