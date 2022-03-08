@@ -3,23 +3,23 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				echo 'Build'
+				echo ''Build''
 			}
 		}
 		stage('Test') {
 			steps{
-				echo 'Test'
+				echo ''Test''
 			}
 		}		
 	} post {
 		always {
-			echo 'I run always'
+			echo "I run always"
 		}
 		success {
-			echo 'I run if its succesful'
+			echo "I run if its succesful"
 		}
 		failure {
-			echo 'I run if its a failure'
+			echo "I run if its a failure"
 		}
 	}
 }
