@@ -1,12 +1,15 @@
 pipeline {
-	agent {
-		docker {image 'node:16.13.1-alpine'}
-	}
+	agent any
 	stages {
 		stage("Build") {
 			steps {
-				sh 'node --version'
 				echo "This is build stage"
+				echo "$PATH"
+				echo "$env.BUILD_NUMBER"
+				echo "$env.BUILD_ID"
+				echo "$env.JOB_NAME"
+				echo "$env.BUILD_TAG"
+				echo "$env.BUILD_URL"
 			}
 		}
 		stage("Test") {
